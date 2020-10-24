@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React, { useContext, createContext, useState } from 'react';
+
+const ToggleContent = createContext();
 
 export default function Accordion ({ children, ...restProps}) {
     return (
@@ -18,10 +20,16 @@ Accordion.Frame = function AccordionFrame({ children, ...restProps}) {
 
 Accordion.Item = function AccordionItem({ children, ...restProps}) {
     const [toggleShow, setToggleShow] = useState(false);
-    return <Item {...restProps}>{children}</Item>
+    return (
+        <ToggleContext.Provider value={{toggleShow, setToggleShow}}>
+            <Item {...restProps}>{children}</Item>
+        </ToggleContext.Provider>
+    );
 };
 
 Accordion.Header = function AccordionHeader({ children, ...restProps}) {
+    const { toggleShow, setToggleShow } = useContext(ToggleContent);
+
     return (<Header onClick={() => setToggle()} {...restProps}>
         {children}
     </Header>
