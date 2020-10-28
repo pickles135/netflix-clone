@@ -19,6 +19,10 @@ Accordion.Frame = function AccordionFrame({ children, ...restProps}) {
     return <Frame {...restProps}>{children}</Frame>
 };
 
+Accordion.Inner = function AccordionInner({ children, ...restProps }) {
+    return <Inner {...restProps}>{children}</Inner>
+}
+
 Accordion.Item = function AccordionItem({ children, ...restProps}) {
     const [toggleShow, setToggleShow] = useState(false);
     return (
