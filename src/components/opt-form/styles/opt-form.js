@@ -6,21 +6,26 @@ export const Container = styled.div`
     height: 100%;
     margin-top: 20px;
     flex-wrap: wrap;
-
+    
     @media (max-width 1000px) {
         flex-direction: column;
         align-items: center;
     }
 `;
-
- export const Input = styled.input`
+    
+export const Input = styled.input`
     max-width: 450px;
     width: 100%;
     border: 0;
     padding: 10px;
     height: 70px;
     box-sizing: border-box;
- `;
+`;
+    
+export const Break = styled.div`
+        flex-basis: 100%;
+        height: 0;
+`;
 
 export const Button = styled.button`
     display: flex;
@@ -31,7 +36,6 @@ export const Button = styled.button`
     color: white;
     text-transform: uppercase;
     padding: 0 32px;
-    margin: 25px;
     font-size: 26px;
     border: 0;
     cursor: pointer;
@@ -67,9 +71,4 @@ export const Text = styled.p`
         font-size: 16px;
         line-height: 22px;
     }
-`;
-
-export const Break = styled.div`
-    flex-basis: 100%;
-    height: 0;
 `;
