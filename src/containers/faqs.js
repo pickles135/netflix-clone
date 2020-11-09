@@ -15,7 +15,6 @@ export function FaqsContainer () {
             <Accordion.Item />
 
             <OptForm>
-                
                 <OptForm.Input placeholder="Email Address" />
                 <OptForm.Button>Get Started</OptForm.Button>
                 <OptForm.Text>
