@@ -15,6 +15,7 @@ const config = {
 
 const firebase = Firebase.initializeApp(config);
 
-seedDatabase(firebase);
+//seeded database -> use this only if need to reseed - USE WITH CAUTION
+// seedDatabase(firebase);
 
 export { firebase };
